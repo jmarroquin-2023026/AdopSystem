@@ -1,0 +1,656 @@
+{
+	"info": {
+		"_postman_id": "0046d7dc-77b9-4a7b-851a-4e8288e1a89e",
+		"name": "AdopSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956975"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Perez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jperez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jperez@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "!2Dm8888888",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "57687975",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "CLIENT",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Josue Marroquin/Pictures/Screenshots/Captura de pantalla 2025-02-07 082949.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "userLogin",
+								"value": "111d@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "!2Dm8888888",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLogin",
+									"value": "jperez",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "!2Dm8888888",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YmU0YTEzMDY4NDVmNGI3OTcxNGQiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4MDk1OCwiZXhwIjoxNzM4OTkxNzU4fQ.dUx8dAL-4o6IndjO1xjFpr0_sJRsOk363xSDqTAXVhA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Alfredo",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Perez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "aperez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "aperez@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "!2Dm8888888",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "57687977",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "CLIENT",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/Josue Marroquin/Pictures/Screenshots/Captura de pantalla 2024-12-17 000256.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YmU0YTEzMDY4NDVmNGI3OTcxNGQiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4MDk1OCwiZXhwIjoxNzM4OTkxNzU4fQ.dUx8dAL-4o6IndjO1xjFpr0_sJRsOk363xSDqTAXVhA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:2636/getUser/67a6be4a1306845f4b79714d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"getUser",
+								"67a6be4a1306845f4b79714d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YmU0YTEzMDY4NDVmNGI3OTcxNGQiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4MDk1OCwiZXhwIjoxNzM4OTkxNzU4fQ.dUx8dAL-4o6IndjO1xjFpr0_sJRsOk363xSDqTAXVhA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YjNiMmJhYjg1ZmNkOWI0NzIyODAiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk3ODI0NiwiZXhwIjoxNzM4OTg5MDQ2fQ.1mGhbC6VX0Ha3Pe2qST-iAxA_jW1lAFahmgxwwvEeQ4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "!2Dm8888888",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "!2Dm88811111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/updatePasswor/67a6be4a1306845f4b79714d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"updatePasswor",
+								"67a6be4a1306845f4b79714d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YmU0YTEzMDY4NDVmNGI3OTcxNGQiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4MDk1OCwiZXhwIjoxNzM4OTkxNzU4fQ.dUx8dAL-4o6IndjO1xjFpr0_sJRsOk363xSDqTAXVhA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Juan",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Perez",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "jperez",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jperez@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "57687977",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "ADMIN",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/updateUser/67a6be4a1306845f4b79714d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"updateUser",
+								"67a6be4a1306845f4b79714d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YmU0YTEzMDY4NDVmNGI3OTcxNGQiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4MDk1OCwiZXhwIjoxNzM4OTkxNzU4fQ.dUx8dAL-4o6IndjO1xjFpr0_sJRsOk363xSDqTAXVhA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:2636/deleteUser/67a6bcaec0b6a76f783b3f31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"deleteUser",
+								"67a6bcaec0b6a76f783b3f31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Animals",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YjNiMmJhYjg1ZmNkOWI0NzIyODAiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk3ODI0NiwiZXhwIjoxNzM4OTg5MDQ2fQ.1mGhbC6VX0Ha3Pe2qST-iAxA_jW1lAFahmgxwwvEeQ4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Luna",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "sick",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "1 year",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "cat",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a6c118ef7e87ea54557861",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YmU0YTEzMDY4NDVmNGI3OTcxNGQiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4MDk1OCwiZXhwIjoxNzM4OTkxNzU4fQ.dUx8dAL-4o6IndjO1xjFpr0_sJRsOk363xSDqTAXVhA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:2636/getAnimals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"getAnimals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "67a6c118ef7e87ea54557861",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/getAnimals/679cdbe2d4e3a031dbdc07b7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"getAnimals",
+								"679cdbe2d4e3a031dbdc07b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Luna",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Sick",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "2 year",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "cat",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a6c118ef7e87ea54557861",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/updateAnimal/679cdbe2d4e3a031dbdc07b7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"updateAnimal",
+								"679cdbe2d4e3a031dbdc07b7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YmU0YTEzMDY4NDVmNGI3OTcxNGQiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk4MDk1OCwiZXhwIjoxNzM4OTkxNzU4fQ.dUx8dAL-4o6IndjO1xjFpr0_sJRsOk363xSDqTAXVhA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/deleteAnimal/679cdbe2d4e3a031dbdc07b7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"deleteAnimal",
+								"679cdbe2d4e3a031dbdc07b7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appoinment",
+			"item": [
+				{
+					"name": "addAppoinment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "date",
+									"value": "2025-02-08",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Medical check",
+									"type": "text"
+								},
+								{
+									"key": "animalId",
+									"value": "67a6c147ef7e87ea54557865",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "679c5abc3669dc8966b98562",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/addApoinment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"addApoinment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
