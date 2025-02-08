@@ -610,7 +610,13 @@
 							"type": "noauth"
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2YjNiMmJhYjg1ZmNkOWI0NzIyODAiLCJ1c2VybmFtZSI6ImpwZXJleiIsIm5hbWUiOiJKdWFuIiwicm9sZSI6IkNMSUVOVCIsImlhdCI6MTczODk3ODI0NiwiZXhwIjoxNzM4OTg5MDQ2fQ.1mGhbC6VX0Ha3Pe2qST-iAxA_jW1lAFahmgxwwvEeQ4",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "urlencoded",
 							"urlencoded": [
